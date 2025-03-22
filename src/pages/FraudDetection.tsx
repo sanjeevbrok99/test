@@ -30,7 +30,7 @@ const FraudDetection = () => {
     formData.append('file', selectedFile);
 
     try {
-      const response = await fetch('http://localhost:5000/upload', {
+      const response = await fetch('https://test-tau-drab-18.vercel.app/upload', {
         method: 'POST',
         body: formData,
       });
