@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/app.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "vite.config.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/app.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "vite.config.ts"
+    }
+  ]
+}
