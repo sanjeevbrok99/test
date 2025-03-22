@@ -2,22 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/app.py",
+      "src": "src/weight/app.py",
       "use": "@vercel/python"
     },
     {
-      "src": "vite.config.ts",
+      "src": "vite.config.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "src/app.py"
+      "src": "/upload|/analyze-json",
+      "dest": "src/weight/app.py"
     },
     {
       "src": "/(.*)",
-      "dest": "vite.config.ts"
+      "dest": "vite.config.js"
     }
   ]
 }
