@@ -1,19 +1,18 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
   "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "react-jsx",  // Add this to enable JSX support
+    "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]  // Matches your import aliases (e.g., '@/components/ui/card')
     },
-    "noImplicitAny": false,
-    "noUnusedParameters": false,
+    "esModuleInterop": true,
     "skipLibCheck": true,
-    "allowJs": true,
-    "noUnusedLocals": false,
-    "strictNullChecks": false
-  }
+    "strict": true,
+    "lib": ["dom", "esnext"]  // Add these for React compatibility
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
